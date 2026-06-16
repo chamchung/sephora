@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:#000;}
+  @keyframes stripeDrift{0%{background-position:0 0;}100%{background-position:0 256px;}}
+  [data-col-card] [data-col-img]{transition:transform .6s cubic-bezier(.4,0,.2,1);}
+  [data-col-card]:hover [data-col-img]{transform:scale(1.06);}
+</style>
+</helmet>
+
+<div data-screen-label="Homepage" style="width:100%;min-width:1160px;background:#000;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased;color:#fff;overflow:hidden;">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:relative;display:flex;align-items:center;justify-content:space-between;background:#000;height:68px;padding:0 40px;border-bottom:1px solid rgba(255,255,255,0.06);">
+    <div style="display:flex;align-items:center;gap:42px;">
+      <div style="display:flex;flex-direction:column;gap:7px;cursor:pointer;width:32px;">
+        <span style="display:block;height:2.5px;width:100%;background:#fff;"></span>
+        <span style="display:block;height:2.5px;width:100%;background:#fff;"></span>
+      </div>
+      <div style="font-size:25px;font-weight:500;letter-spacing:7px;padding-left:1px;">SEPHORA</div>
+    </div>
+    <nav style="position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:38px;font-size:12.5px;letter-spacing:1.5px;font-weight:500;">
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">SHOP</a>
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">NEW</a>
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">BRANDS</a>
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">GIFTS</a>
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">COMMUNITY</a>
+      <a style="color:#fff;text-decoration:none;cursor:pointer;" style-hover="color:#9a9a9a">SERVICES</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:26px;">
+      <div style="display:flex;align-items:center;gap:9px;cursor:pointer;">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.6" y2="16.6"></line></svg>
+        <span style="font-size:12px;letter-spacing:1.5px;font-weight:500;">SEARCH</span>
+      </div>
+      <svg style="cursor:pointer" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="8" r="4"></circle><path d="M4.5 20.5c0-4 3.5-6 7.5-6s7.5 2 7.5 6"></path></svg>
+      <svg style="cursor:pointer" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 20.5C5.5 15 3 11.4 3 8.2A4.4 4.4 0 0 1 12 6.3 4.4 4.4 0 0 1 21 8.2c0 3.2-2.5 6.8-9 12.3z"></path></svg>
+      <svg style="cursor:pointer" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M6 8.5h12l1 12H5z"></path><path d="M9 8.5a3 3 0 0 1 6 0"></path></svg>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section style="position:relative;display:grid;grid-template-columns:37% 63%;background:#000;height:582px;">
+    <!-- left striped edge -->
+    <div style="position:absolute;top:0;left:0;height:100%;width:58px;background-image:repeating-linear-gradient(180deg,#ffffff 0 54px,transparent 54px 128px);background-position:0 0;z-index:1;"></div>
+
+    <!-- left content -->
+    <div style="position:relative;z-index:2;display:flex;flex-direction:column;justify-content:center;padding:0 50px 0 92px;">
+      <div style="font-size:11px;letter-spacing:3px;color:#cfcfcf;margin-bottom:22px;">THE BEAUTY DESTINATION</div>
+      <h1 style="font-size:78px;line-height:0.92;letter-spacing:-2.5px;font-weight:700;color:#fff;">WHERE<br>BEAUTY<br>BEGINS</h1>
+      <p style="font-size:15px;line-height:1.6;color:#b3b3b3;margin-top:26px;">Explore the world of Sephora.<br>Uncover. Play. Belong.</p>
+      <button style="margin-top:32px;align-self:flex-start;display:inline-flex;align-items:center;gap:34px;background:#fff;color:#000;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:1.8px;padding:17px 24px;transition:all .25s ease;" style-hover="background:#000;color:#fff;box-shadow:inset 0 0 0 1.5px #fff">SHOP NOW <span style="font-size:16px;">→</span></button>
+      <div style="display:flex;align-items:center;gap:18px;margin-top:46px;font-size:13px;letter-spacing:1px;color:#fff;">
+        <span>01</span>
+        <span style="display:block;width:120px;height:1px;background:linear-gradient(to right,#fff 40%,#555 40%);"></span>
+        <span style="color:#777;">04</span>
+      </div>
+    </div>
+
+    <!-- right store image -->
+    <div style="position:relative;height:100%;">
+      <img src="./assets/img-01.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      <div style="position:absolute;top:50%;right:46px;transform:translateY(-50%);text-align:right;z-index:2;font-weight:700;font-size:23px;letter-spacing:1.5px;line-height:1.85;color:#fff;text-shadow:0 1px 18px rgba(0,0,0,0.5);">BEAUTY<br>HAS<br>NO<br>RULES</div>
+    </div>
+  </section>
+
+  <!-- ============ TRENDING NOW ============ -->
+  <section style="position:relative;background:#000;padding:0 0 38px;">
+    <div style="display:flex;align-items:stretch;">
+
+      <!-- vertical title -->
+      <div style="flex:0 0 96px;display:flex;align-items:center;justify-content:center;padding-top:18px;">
+        <span style="writing-mode:vertical-rl;transform:rotate(180deg);font-size:26px;letter-spacing:8px;font-weight:700;color:#fff;line-height:1;">TRENDING NOW</span>
+      </div>
+
+      <!-- cards rail -->
+      <div style="position:relative;flex:1;padding:48px 70px 0 0;">
+        <div style="display:flex;align-items:flex-start;gap:18px;">
+
+          <!-- STANDARD: NARS -->
+          <div style="flex:1 1 0;cursor:pointer;">
+            <div style="position:relative;height:252px;background-image:repeating-linear-gradient(180deg,#fff 0 31px,#0c0c0c 31px 62px);overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-02.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;">
+            </div>
+            <div style="position:relative;padding:18px 4px 0;">
+              <svg style="position:absolute;top:18px;right:4px;cursor:pointer" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 20C6 15 3.5 11.6 3.5 8.5A4 4 0 0 1 12 6.2 4 4 0 0 1 20.5 8.5C20.5 11.6 18 15 12 20z"></path></svg>
+              <div style="font-size:12px;letter-spacing:1.5px;font-weight:700;color:#fff;">NARS</div>
+              <div style="font-size:13px;color:#bdbdbd;margin-top:6px;">Explicit Lipstick</div>
+              <div style="font-size:13px;color:#fff;margin-top:8px;">$30.00</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:9px;"><span style="font-size:11px;letter-spacing:2px;color:#fff;">★★★★★</span><span style="font-size:11px;color:#8a8a8a;">(1.4k)</span></div>
+            </div>
+          </div>
+
+          <!-- STANDARD: GIVENCHY -->
+          <div style="flex:1 1 0;cursor:pointer;">
+            <div style="position:relative;height:252px;background-image:repeating-linear-gradient(180deg,#fff 0 31px,#0c0c0c 31px 62px);overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-03.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;">
+            </div>
+            <div style="position:relative;padding:18px 4px 0;">
+              <svg style="position:absolute;top:18px;right:4px;cursor:pointer" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 20C6 15 3.5 11.6 3.5 8.5A4 4 0 0 1 12 6.2 4 4 0 0 1 20.5 8.5C20.5 11.6 18 15 12 20z"></path></svg>
+              <div style="font-size:12px;letter-spacing:1.5px;font-weight:700;color:#fff;">GIVENCHY</div>
+              <div style="font-size:13px;color:#bdbdbd;margin-top:6px;">Prisme Libre Glow</div>
+              <div style="font-size:13px;color:#fff;margin-top:8px;">$54.00</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:9px;"><span style="font-size:11px;letter-spacing:2px;color:#fff;">★★★★★</span><span style="font-size:11px;color:#8a8a8a;">(902)</span></div>
+            </div>
+          </div>
+
+          <!-- ACCENT: RARE BEAUTY -->
+          <div style="flex:1 1 0;cursor:pointer;">
+            <div style="position:relative;height:252px;background:#efc9c5;overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-04.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;">
+            </div>
+            <div style="position:relative;padding:18px 4px 0;">
+              <svg style="position:absolute;top:18px;right:4px;cursor:pointer" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3a2522" stroke-width="1.5"><path d="M12 20C6 15 3.5 11.6 3.5 8.5A4 4 0 0 1 12 6.2 4 4 0 0 1 20.5 8.5C20.5 11.6 18 15 12 20z"></path></svg>
+              <div style="font-size:12px;letter-spacing:1.5px;font-weight:700;color:#fff;">RARE BEAUTY</div>
+              <div style="font-size:13px;color:#bdbdbd;margin-top:6px;">Soft Pinch Liquid Blush</div>
+              <div style="font-size:13px;color:#fff;margin-top:8px;">$23.00</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:9px;"><span style="font-size:11px;letter-spacing:2px;color:#fff;">★★★★★</span><span style="font-size:11px;color:#8a8a8a;">(2.7k)</span></div>
+            </div>
+          </div>
+
+          <!-- STANDARD: DRUNK ELEPHANT -->
+          <div style="flex:1 1 0;cursor:pointer;">
+            <div style="position:relative;height:252px;background-image:repeating-linear-gradient(180deg,#fff 0 31px,#0c0c0c 31px 62px);overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-05.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;">
+            </div>
+            <div style="position:relative;padding:18px 4px 0;">
+              <svg style="position:absolute;top:18px;right:4px;cursor:pointer" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 20C6 15 3.5 11.6 3.5 8.5A4 4 0 0 1 12 6.2 4 4 0 0 1 20.5 8.5C20.5 11.6 18 15 12 20z"></path></svg>
+              <div style="font-size:12px;letter-spacing:1.5px;font-weight:700;color:#fff;">DRUNK ELEPHANT</div>
+              <div style="font-size:13px;color:#bdbdbd;margin-top:6px;">Beste™ No. 9 Jelly Cleanser</div>
+              <div style="font-size:13px;color:#fff;margin-top:8px;">$34.00</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:9px;"><span style="font-size:11px;letter-spacing:2px;color:#fff;">★★★★★</span><span style="font-size:11px;color:#8a8a8a;">(1.1k)</span></div>
+            </div>
+          </div>
+
+          <!-- STANDARD: BYREDO -->
+          <div style="flex:1 1 0;cursor:pointer;">
+            <div style="position:relative;height:252px;background-image:repeating-linear-gradient(180deg,#fff 0 31px,#0c0c0c 31px 62px);overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-06.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:contain;display:block;">
+            </div>
+            <div style="position:relative;padding:18px 4px 0;">
+              <svg style="position:absolute;top:18px;right:4px;cursor:pointer" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 20C6 15 3.5 11.6 3.5 8.5A4 4 0 0 1 12 6.2 4 4 0 0 1 20.5 8.5C20.5 11.6 18 15 12 20z"></path></svg>
+              <div style="font-size:12px;letter-spacing:1.5px;font-weight:700;color:#fff;">BYREDO</div>
+              <div style="font-size:13px;color:#bdbdbd;margin-top:6px;">Blanche Eau de Parfum</div>
+              <div style="font-size:13px;color:#fff;margin-top:8px;">$190.00</div>
+              <div style="display:flex;align-items:center;gap:7px;margin-top:9px;"><span style="font-size:11px;letter-spacing:2px;color:#fff;">★★★★★</span><span style="font-size:11px;color:#8a8a8a;">(1.7k)</span></div>
+            </div>
+          </div>
+
+          <!-- EDITORIAL: HOURGLASS -->
+          <div style="flex:1.25 1 0;cursor:pointer;">
+            <div style="position:relative;height:374px;overflow:hidden;transition:transform .35s ease;" style-hover="transform:translateY(-6px)">
+              <img src="./assets/img-07.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 40%,rgba(0,0,0,0.55) 100%);z-index:1;pointer-events:none;"></div>
+              <div style="position:absolute;left:24px;bottom:24px;z-index:2;pointer-events:none;">
+                <div style="font-size:23px;font-weight:700;letter-spacing:0.5px;line-height:1.12;color:#fff;">AIRBRUSH.<br>BLUR. SET. GLOW.</div>
+                <div style="font-size:11px;letter-spacing:1px;color:#dcdcdc;margin-top:10px;">New from HOURGLASS</div>
+                <div style="display:inline-flex;align-items:center;gap:10px;margin-top:14px;font-size:11px;letter-spacing:1.5px;font-weight:600;color:#fff;border-bottom:1.5px solid #fff;padding-bottom:4px;">SHOP NOW <span>→</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- pagination -->
+        <div style="display:flex;align-items:center;justify-content:center;gap:18px;margin-top:30px;font-size:12px;letter-spacing:1px;color:#fff;">
+          <span>01</span>
+          <span style="display:block;width:200px;height:1px;background:linear-gradient(to right,#fff 30%,#444 30%);"></span>
+          <span style="color:#777;">04</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- arrows -->
+    <div style="position:absolute;left:78px;top:222px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;transition:transform .2s ease;" style-hover="transform:scale(1.08)">
+      <span style="color:#000;font-size:17px;">←</span>
+    </div>
+    <div style="position:absolute;right:30px;top:222px;width:40px;height:40px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:3;transition:transform .2s ease;" style-hover="transform:scale(1.08)">
+      <span style="color:#000;font-size:17px;">→</span>
+    </div>
+  </section>
+
+  <!-- ============ BEAUTY WITHOUT LIMITS ============ -->
+  <section style="display:grid;grid-template-columns:30% 70%;background:#e7e6e3;">
+    <div style="display:flex;flex-direction:column;justify-content:center;padding:48px 40px 48px 50px;">
+      <h2 style="font-size:60px;line-height:0.92;letter-spacing:-1.5px;font-weight:700;color:#111;">BEAUTY<br>WITHOUT<br>LIMITS</h2>
+      <p style="font-size:15px;line-height:1.55;color:#444;margin-top:24px;">It's more than beauty.<br>It's expression.</p>
+      <button style="margin-top:30px;align-self:flex-start;display:inline-flex;align-items:center;gap:30px;background:none;border:1.5px solid #111;color:#111;cursor:pointer;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:1.6px;padding:14px 22px;white-space:nowrap;transition:all .25s ease;" style-hover="background:#111;color:#fff">LEARN MORE <span style="font-size:15px;">→</span></button>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:0;min-height:430px;background:#e7e6e3;">
+      <img src="./assets/img-08.webp" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="./assets/img-09.webp" style="width:100%;height:100%;object-fit:cover;display:block;">
+      <img src="./assets/img-10.webp" style="width:100%;height:100%;object-fit:cover;display:block;">
+    </div>
+  </section>
+
+  <!-- ============ SHOP BY CATEGORY ============ -->
+  <section style="background:#000;padding:60px 44px 64px;">
+    <div style="display:flex;align-items:center;gap:50px;">
+      <div style="flex:0 0 auto;">
+        <h3 style="font-size:31px;line-height:1.0;letter-spacing:-0.5px;font-weight:700;color:#fff;">SHOP BY<br>CATEGORY</h3>
+        <button style="margin-top:22px;display:inline-flex;align-items:center;gap:26px;background:none;border:1.5px solid #fff;color:#fff;cursor:pointer;font-family:inherit;font-size:11px;font-weight:600;letter-spacing:1.6px;padding:12px 18px;white-space:nowrap;transition:all .25s ease;" style-hover="background:#fff;color:#000">VIEW ALL <span style="font-size:14px;">→</span></button>
+      </div>
+      <div style="flex:1;display:grid;grid-template-columns:repeat(6,1fr);gap:20px;">
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-11.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>MAKEUP</span></div>
+        </div>
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-12.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>SKINCARE</span></div>
+        </div>
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-13.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>FRAGRANCE</span></div>
+        </div>
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-14.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>HAIR</span></div>
+        </div>
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-15.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>TOOLS</span></div>
+        </div>
+
+        <div style="cursor:pointer;">
+          <div style="position:relative;height:150px;background-image:repeating-linear-gradient(180deg,#ffffff 0 22px,#000000 22px 44px);background-position:0 0;transition:background-position .45s cubic-bezier(.4,0,.2,1);overflow:visible;" style-hover="background-position:0 22px">
+            <img src="./assets/img-16.webp" style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:96px;height:178px;object-fit:contain;display:block;">
+          </div>
+          <div style="display:flex;align-items:center;justify-content:center;margin-top:16px;font-size:11.5px;letter-spacing:1.5px;font-weight:600;color:#fff;white-space:nowrap;"><span>CLEAN BEAUTY</span></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CURATED COLLECTIONS ============ -->
+  <section style="display:grid;grid-template-columns:repeat(3,1fr);background:#000;">
+
+    <div data-col-card style="position:relative;height:430px;overflow:hidden;cursor:pointer;">
+      <div data-col-img style="position:absolute;inset:0;width:100%;height:100%;">
+        <img src="./assets/img-17.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.35) 0%,rgba(0,0,0,0) 38%,rgba(0,0,0,0.35) 100%);z-index:1;pointer-events:none;"></div>
+      <div style="position:absolute;top:34px;left:34px;z-index:2;pointer-events:none;">
+        <div style="font-size:34px;line-height:1.0;letter-spacing:-0.5px;font-weight:700;color:#fff;">THE<br>FRAGRANCE<br>EDIT</div>
+        <div style="font-size:14px;line-height:1.6;color:#fff;margin-top:16px;font-weight:500;">Scent is personal.<br>Find yours.</div>
+      </div>
+      <div style="position:absolute;left:34px;bottom:30px;z-index:2;pointer-events:none;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1.5px;font-weight:600;color:#fff;border-bottom:1.5px solid #fff;padding-bottom:4px;">SHOP THE EDIT <span>→</span></div>
+    </div>
+
+    <div data-col-card style="position:relative;height:430px;overflow:hidden;cursor:pointer;">
+      <div data-col-img style="position:absolute;inset:0;width:100%;height:100%;">
+        <img src="./assets/img-18.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.18) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.18) 100%);z-index:1;pointer-events:none;"></div>
+      <div style="position:absolute;top:34px;left:34px;z-index:2;pointer-events:none;">
+        <div style="font-size:34px;line-height:1.0;letter-spacing:-0.5px;font-weight:700;color:#fff;">THE<br>SUMMER<br>SKIN EDIT</div>
+        <div style="font-size:14px;line-height:1.6;color:#fff;margin-top:16px;font-weight:500;">Hydration.<br>Protection.<br>Radiance.</div>
+      </div>
+      <div style="position:absolute;left:34px;bottom:30px;z-index:2;pointer-events:none;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1.5px;font-weight:600;color:#fff;border-bottom:1.5px solid #fff;padding-bottom:4px;">SHOP THE EDIT <span>→</span></div>
+    </div>
+
+    <div data-col-card style="position:relative;height:430px;overflow:hidden;cursor:pointer;">
+      <div data-col-img style="position:absolute;inset:0;width:100%;height:100%;">
+        <img src="./assets/img-19.webp" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;">
+      </div>
+      <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0.32) 0%,rgba(0,0,0,0) 40%,rgba(0,0,0,0.32) 100%);z-index:1;pointer-events:none;"></div>
+      <div style="position:absolute;top:34px;left:34px;z-index:2;pointer-events:none;">
+        <div style="font-size:34px;line-height:1.0;letter-spacing:-0.5px;font-weight:700;color:#fff;">THE<br>CLEAN<br>BEAUTY EDIT</div>
+        <div style="font-size:14px;line-height:1.6;color:#fff;margin-top:16px;font-weight:500;">Good ingredients.<br>Real results.<br>Conscious choices.</div>
+      </div>
+      <div style="position:absolute;left:34px;bottom:30px;z-index:2;pointer-events:none;display:inline-flex;align-items:center;gap:10px;font-size:11px;letter-spacing:1.5px;font-weight:600;color:#fff;border-bottom:1.5px solid #fff;padding-bottom:4px;">SHOP THE EDIT <span>→</span></div>
+    </div>
+
+  </section>
+
+  <!-- ============ NEWSLETTER ============ -->
+  <section style="position:relative;background:#0a0a0a;padding:96px 44px 80px;overflow:hidden;">
+    <!-- fading oversized diagonal stripes -->
+    <div style="position:absolute;top:0;right:0;width:46%;height:100%;background-image:repeating-linear-gradient(118deg,rgba(255,255,255,0.07) 0 26px,transparent 26px 64px);-webkit-mask-image:linear-gradient(to left,#000,transparent);mask-image:linear-gradient(to left,#000,transparent);z-index:0;"></div>
+
+    <div style="position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;">
+      <div>
+        <h2 style="font-size:84px;line-height:0.9;letter-spacing:-2.5px;font-weight:700;color:#fff;">BEAUTY<br>DELIVERED.</h2>
+        <p style="font-size:15px;line-height:1.6;color:#a8a8a8;margin-top:26px;">Get launches, trends, exclusives,<br>and inspiration before anyone else.</p>
+      </div>
+      <div style="justify-self:end;width:100%;max-width:460px;">
+        <div style="display:flex;height:56px;">
+          <input type="email" placeholder="Enter your email" style="flex:1;border:none;outline:none;background:#fff;color:#111;font-family:inherit;font-size:14px;padding:0 22px;">
+          <button style="flex:0 0 auto;display:inline-flex;align-items:center;gap:12px;background:#1a1a1a;color:#fff;border:none;cursor:pointer;font-family:inherit;font-size:12px;font-weight:600;letter-spacing:1.5px;padding:0 30px;box-shadow:inset 0 0 0 1px #444;transition:all .25s ease;" style-hover="background:#fff;color:#000">SUBSCRIBE <span style="font-size:15px;">→</span></button>
+        </div>
+        <label style="display:flex;align-items:center;gap:12px;margin-top:18px;cursor:pointer;">
+          <span style="display:inline-block;width:16px;height:16px;border:1.5px solid #777;"></span>
+          <span style="font-size:13px;color:#9a9a9a;">Yes, sign me up for Sephora emails.</span>
+        </label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER BAR ============ -->
+  <footer style="background:#000;border-top:1px solid rgba(255,255,255,0.1);padding:30px 44px;display:flex;align-items:center;justify-content:space-between;">
+    <div style="font-size:21px;font-weight:500;letter-spacing:6px;color:#fff;">SEPHORA</div>
+    <nav style="display:flex;gap:46px;font-size:11.5px;letter-spacing:1.5px;font-weight:500;color:#cfcfcf;">
+      <a style="color:#cfcfcf;text-decoration:none;cursor:pointer;" style-hover="color:#fff">ABOUT US</a>
+      <a style="color:#cfcfcf;text-decoration:none;cursor:pointer;" style-hover="color:#fff">CAREERS</a>
+      <a style="color:#cfcfcf;text-decoration:none;cursor:pointer;" style-hover="color:#fff">AFFILIATES</a>
+      <a style="color:#cfcfcf;text-decoration:none;cursor:pointer;" style-hover="color:#fff">STORE LOCATOR</a>
+      <a style="color:#cfcfcf;text-decoration:none;cursor:pointer;" style-hover="color:#fff">CONTACT US</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:20px;">
+      <svg style="cursor:pointer" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17.5" cy="6.5" r="1.1" fill="#fff" stroke="none"></circle></svg>
+      <svg style="cursor:pointer" width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M16.5 2c.3 2.4 1.7 4 4 4.3v3c-1.5.1-2.9-.3-4-1V15a6 6 0 1 1-6-6c.3 0 .6 0 1 .1v3.1a3 3 0 1 0 2 2.8V2h3z"></path></svg>
+      <svg style="cursor:pointer" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="2.5" y="5.5" width="19" height="13" rx="3.5"></rect><path d="M10 9.2l5 2.8-5 2.8z" fill="#fff" stroke="none"></path></svg>
+      <svg style="cursor:pointer" width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-3.6 19.3c-.1-.8-.2-2 0-2.9l1.2-5s-.3-.6-.3-1.5c0-1.4.8-2.5 1.9-2.5.9 0 1.3.7 1.3 1.5 0 .9-.6 2.2-.9 3.5-.2 1 .5 1.9 1.6 1.9 1.9 0 3.2-2.4 3.2-5.3 0-2.2-1.5-3.8-4.1-3.8-3 0-4.9 2.2-4.9 4.7 0 .9.3 1.5.7 2 .2.2.2.3.1.5l-.2.9c-.1.3-.3.4-.6.2-1.2-.5-1.7-1.9-1.7-3.4 0-2.5 2.1-5.5 6.3-5.5 3.4 0 5.6 2.4 5.6 5.1 0 3.4-1.9 6-4.7 6-1 0-1.9-.5-2.2-1.1l-.6 2.4c-.2.8-.7 1.7-1 2.3A10 10 0 1 0 12 2z"></path></svg>
+      <svg style="cursor:pointer" width="19" height="19" viewBox="0 0 24 24" fill="#fff"><path d="M14 9h2.5l.5-3H14V4.2c0-.9.3-1.5 1.6-1.5H17V.1C16.7.1 15.7 0 14.6 0 12.3 0 11 1.3 11 3.9V6H8.5v3H11v9h3V9z"></path></svg>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>
